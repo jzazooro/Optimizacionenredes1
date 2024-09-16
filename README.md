@@ -5,27 +5,7 @@ Grupo 6
 
 El análisis EDA (Exploratory Data Analysis o Análisis Exploratorio de Datos) es un enfoque utilizado en ciencia de datos para analizar y resumir las características principales de un conjunto de datos antes de aplicar modelos o técnicas estadísticas más avanzadas. Su objetivo es explorar los datos de manera visual e intuitiva para detectar patrones, anomalías, verificar supuestos, y formular hipótesis de trabajo.
 
-### Principales Objetivos del EDA:
-
-1. **Comprender la Distribución de los Datos:**
-   - Examinar la distribución de las variables para identificar su forma, dispersión, y tendencia central.
-   - Evaluar la presencia de sesgos, colas largas, outliers (valores atípicos) o cualquier forma de desviación de lo esperado.
-
-2. **Identificar Relaciones entre Variables:**
-   - Explorar posibles correlaciones o relaciones entre diferentes variables, lo que puede ayudar a identificar factores importantes o dependencias en los datos.
-   - Identificar variables que podrían tener un impacto significativo en el modelo predictivo o analítico que se planea desarrollar.
-
-3. **Detectar Valores Atípicos y Anomalías:**
-   - Identificar outliers o anomalías que podrían distorsionar los resultados del análisis o los modelos predictivos.
-   - Comprender si los outliers son errores de entrada de datos o si representan fenómenos que deben ser considerados en el análisis.
-
-4. **Validar Supuestos:**
-   - Verificar si los datos cumplen con los supuestos estadísticos necesarios para los métodos que se planea usar, como la normalidad, homocedasticidad, y linearidad.
-   
-5. **Guiar el Proceso de Modelado:**
-   - Ayudar a formular hipótesis, seleccionar variables relevantes, y elegir los métodos de modelado más apropiados en función de los patrones observados en los datos.
-
-### Técnicas y Herramientas Comunes en EDA:
+## Técnicas y Herramientas Comunes en EDA:
 
 1. **Visualización de Datos:**
    - **Histogramas:** Para observar la distribución de una variable continua.
@@ -72,4 +52,55 @@ El EDA es una etapa crucial en el proceso de análisis de datos, ya que ayuda a:
 - **Librerías de R:** `ggplot2`, `dplyr`, `tidyr`, `data.table`.
 - **Herramientas de Software:** Excel, Tableau, Power BI, entre otras.
 
-¿Te gustaría profundizar en alguna técnica específica de EDA o necesitas un ejemplo más detallado?
+Parece que el archivo CSV utiliza un delimitador diferente al estándar de coma (`,`). Observando los datos, parece que el delimitador podría ser un punto y coma (`;`). Intentaré cargar el archivo nuevamente utilizando este delimitador.
+
+El archivo CSV contiene información sobre vehículos y clientes, con un total de 25 columnas. A continuación, te proporcionaré un plan paso a paso para realizar un Análisis Exploratorio de Datos (EDA) con esta información.
+
+## Paso a Paso para el Análisis Exploratorio de Datos (EDA)
+
+1. **Comprender la Estructura del Dataset:**
+   - Revisa las primeras y últimas filas del dataset para tener una idea general de su contenido.
+   - Obtén un resumen de la estructura de los datos usando `info()` para ver los tipos de datos, y revisa la presencia de valores nulos.
+
+2. **Limpieza de Datos:**
+   - **Valores nulos o faltantes:** Identifica columnas con valores nulos y decide cómo manejarlos (eliminación, imputación con media/mediana/moda, etc.).
+   - **Duplicados:** Revisa si hay filas duplicadas y decide si deben ser eliminadas.
+   - **Errores tipográficos o inconsistencias:** Corrige errores en las categorías (por ejemplo, diferentes formas de escribir el mismo valor).
+
+3. **Análisis Univariado:**
+   - Analiza cada variable por separado.
+     - **Variables categóricas:** Utiliza tablas de frecuencia y gráficos de barras para ver la distribución de cada categoría.
+     - **Variables numéricas:** Utiliza histogramas, boxplots y estadísticas descriptivas (media, mediana, desviación estándar, etc.) para entender su distribución.
+
+4. **Análisis Bivariado:**
+   - Explora relaciones entre pares de variables.
+     - **Categóricas vs. categóricas:** Utiliza tablas de contingencia y gráficos de mosaico.
+     - **Categóricas vs. numéricas:** Utiliza boxplots o violín plots para ver la distribución de las variables numéricas dentro de cada categoría.
+     - **Numéricas vs. numéricas:** Utiliza gráficos de dispersión y calcula coeficientes de correlación para identificar relaciones lineales.
+
+5. **Análisis Multivariado:**
+   - Investiga relaciones entre múltiples variables.
+   - Usa técnicas como gráficos de pares (pairplot) y análisis de componentes principales (PCA) para reducir la dimensionalidad y visualizar patrones en múltiples variables.
+
+6. **Análisis de Outliers:**
+   - Identifica y analiza los valores atípicos.
+   - Usa boxplots o el método de Z-score para detectar outliers en variables numéricas y decidir si deben ser eliminados o transformados.
+
+7. **Feature Engineering:**
+   - Crea nuevas variables que puedan ser relevantes para el análisis, basándote en las relaciones encontradas.
+   - Por ejemplo, podrías crear una nueva variable que agrupe ciertos tipos de carrocerías o que combine características de clientes para identificar segmentos específicos.
+
+8. **Transformaciones y Normalización:**
+   - Realiza transformaciones (logarítmica, raíz cuadrada, etc.) en variables que no tengan una distribución normal si es necesario.
+   - Estandariza o normaliza las variables numéricas para prepararlas para análisis posteriores o modelado.
+
+9. **Visualización de Datos:**
+   - Utiliza gráficos avanzados (como heatmaps, gráficos de correlación, etc.) para visualizar las relaciones y patrones identificados.
+   - Asegúrate de que las visualizaciones sean claras y transmitan información relevante de manera efectiva.
+
+10. **Documentación y Conclusiones:**
+    - Resume los hallazgos clave de tu análisis.
+    - Documenta cualquier anomalía, patrón o relación interesante que hayas encontrado.
+    - Prepara un informe o presentación con visualizaciones para comunicar tus resultados a las partes interesadas.
+
+
